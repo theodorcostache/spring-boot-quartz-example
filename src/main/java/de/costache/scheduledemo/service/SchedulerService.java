@@ -25,7 +25,6 @@ public class SchedulerService implements InitializingBean {
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		// register(GreetJob.class, GreetJob.class.getSimpleName(), "GREETING", true);
 		scheduleJob(GreetJob.class, GreetJob.class.getSimpleName(), "GREETING", "* * * * * ?");
 	}
 
